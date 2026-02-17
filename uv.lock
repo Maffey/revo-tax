@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[[package]]
+name = "currencyconverter"
+version = "0.18.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b7/51/2253967678f840bdac80af669145e9cc4f6db71673f67c826a96c7b2e522/currencyconverter-0.18.14.tar.gz", hash = "sha256:0b6104ae0cdfa2fd3f3f03342f6aaa34091207046e9261516be625a66cffeb91", size = 3832720, upload-time = "2026-01-21T09:54:42.43Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/f9/70bc729b4a0942baa8e6c490fc5d44aaef3439ebb064923ba6b39577a978/currencyconverter-0.18.14-py3-none-any.whl", hash = "sha256:cbcab5ae5e5f12e87b148691517a51002ffc5e15d7e4994cf782567fbdc5d9fa", size = 638738, upload-time = "2026-01-21T09:54:41.056Z" },
+]
+
+[[package]]
+name = "revotax"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "currencyconverter" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "currencyconverter", specifier = ">=0.18.14" }]
