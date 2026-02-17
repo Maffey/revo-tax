@@ -6,3 +6,8 @@ requires-python = ">=3.14"
 dependencies = [
     "currencyconverter>=0.18.14",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.1",
+]
