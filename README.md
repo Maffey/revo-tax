@@ -16,5 +16,5 @@ You are solely responsible for verifying the output against your actual transact
 
 ## Development
 
-Code style: `uv run prek`
-Typing: `uv run ty check`
+- Code style: `uv run prek`
+- Typing: `uv run ty check`
