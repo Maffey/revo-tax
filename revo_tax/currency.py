@@ -12,6 +12,9 @@ class Currency(StrEnum):
 
 currency_converter = CurrencyConverter()
 
+def yesterday(given_date: datetime.date) -> datetime.date:
+    return given_date - datetime.timedelta(days=1)
+
 
 def convert(
     amount: float, currency: Currency, conversion_date: datetime.date | None = None

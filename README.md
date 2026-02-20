@@ -2,6 +2,11 @@
 
 Helps you calculate the taxes for Revolut in Poland.
 
+## Limitations
+
+I'm ignoring crypto completely as I personally didn't have any transactions last year.
+If needed, I can try to work something out.
+
 ## Legal information
 
 This project is an independent open-source tool and is not affiliated with, endorsed by, or connected to
@@ -15,6 +20,8 @@ The maintainers of this repository cannot guarantee the accuracy of the calculat
 You are solely responsible for verifying the output against your actual transaction data and consulting with a qualified tax professional before filing.
 
 ## Development
+
+To run: `uv run main.py`
 
 - Code style: `uv run prek`
 - Typing: `uv run ty check`

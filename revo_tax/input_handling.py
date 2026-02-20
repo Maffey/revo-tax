@@ -1,0 +1,4 @@
+
+
+class UnknownFileFormatException(Exception):
+    pass
