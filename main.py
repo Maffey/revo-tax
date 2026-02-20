@@ -15,7 +15,7 @@ def main(path_to_consolidated_statement: str) -> None:
         path_to_consolidated_statement: path to your CSV report generated in Revolut
     """
     report = ConsolidatedReportManager(path_to_consolidated_statement)
-
+    savings = report.savings_accounts_section
     print("Goodbye!")
 
 

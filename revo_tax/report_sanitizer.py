@@ -48,10 +48,10 @@ def normalize_report(report: CsvReport) -> CsvReport:
 
     for row in report:
         new_row = []
-        for item in row:
+        for cell in row:
             for function in _REPORT_NORMALIZATION_PROCESSORS:
-                item = function(item)
-            new_row.append(item)
+                cell = function(cell)
+            new_row.append(cell)
         normalized_report.append(new_row)
 
     return normalized_report

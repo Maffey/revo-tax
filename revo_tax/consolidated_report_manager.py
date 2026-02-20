@@ -2,9 +2,11 @@
 Manages the consolidated CSV report file.
 """
 import csv
+from functools import cached_property
 
 from revo_tax.common import CsvReport
 from revo_tax.report_sanitizer import normalize_report
+from revo_tax.savings_account import SavingsView
 
 
 class ConsolidatedReportManager:
@@ -14,3 +16,12 @@ class ConsolidatedReportManager:
         with open(file_path, mode="r") as csv_file:
             report = list(csv.reader(csv_file, delimiter=","))
             self._report: CsvReport = normalize_report(report)
+
+
+
+
+    @cached_property
+    def savings_accounts_section(self):
+        # TODO create a way to extract only savings-related part of csv file.
+        #    pro-tip: Summary for ... and empty newline
+        return SavingsView(self._report)
