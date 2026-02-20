@@ -18,6 +18,7 @@ def main(path_to_consolidated_statement: str) -> None:
     savings = report.savings
     print(f"{savings.total_earnings = }")
     print(f"{savings.tax = }")
+    # currency_converter = CurrencyConverter()
 
     print("Goodbye!")
 
