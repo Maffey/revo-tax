@@ -1,10 +1,19 @@
 import datetime
 
+import arguably
+
 from revo_tax.consolidated_report_manager import ConsolidatedReportManager
 from revo_tax.currency import convert, Currency
 
+@arguably.command
+def main(path_to_consolidated_statement: str) -> None:
+    """
+    Calculate your taxes for Revolut in Poland
+    by providing the path to your CSV consolidated statement for taxable year.
 
-def main() -> None:
+    Args:
+        path_to_consolidated_statement: path to your CSV report generated in Revolut
+    """
     val = convert(
         amount=100.0,
         currency=Currency.EUR,
@@ -12,9 +21,10 @@ def main() -> None:
     )
     print(val)
 
-    report = ConsolidatedReportManager('data/consolidated-statement_2025-01-01_2025-12-31_pl-pl_a1aa72.csv')
+    # report = ConsolidatedReportManager('data/consolidated-statement_2025-01-01_2025-12-31_pl-pl_a1aa72.csv')
+    report = ConsolidatedReportManager(path_to_consolidated_statement)
     print(report)
 
 
 if __name__ == "__main__":
-    main()
+    arguably.run()

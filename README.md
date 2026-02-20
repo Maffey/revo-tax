@@ -21,7 +21,7 @@ You are solely responsible for verifying the output against your actual transact
 
 ## Development
 
-To run: `uv run main.py`
+To run: `uv run main.py <path_to_report.csv>`
 
 - Code style: `uv run prek`
 - Typing: `uv run ty check`
