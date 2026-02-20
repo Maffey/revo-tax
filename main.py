@@ -16,6 +16,7 @@ def main(path_to_consolidated_statement: str) -> None:
     """
     report = ConsolidatedReportManager(path_to_consolidated_statement)
     savings = report.savings_accounts_section
+    print(f"{savings.total_earnings = }")
     print("Goodbye!")
 
 

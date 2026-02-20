@@ -1,3 +1,5 @@
+from functools import cached_property
+
 from revo_tax.common import CsvReport
 from revo_tax.input_handling import CsvFileCannotBeParsedError
 
@@ -8,6 +10,11 @@ class SavingsView:
     def __init__(self, report: CsvReport) -> None:
         self._view = find_savings(report)
 
+    @cached_property
+    def total_earnings(self):
+        for row in self._view:
+            if "Łączna kwota zarobionych odsetek" in row[0]:
+                return row[1]
 
 
 def find_savings(report: CsvReport) -> CsvReport:

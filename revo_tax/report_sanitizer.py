@@ -38,6 +38,7 @@ _REPORT_NORMALIZATION_PROCESSORS: tuple[Callable[[str], str] ,...] = (
     _drop_hard_spaces,
     _drop_currency_suffix,
     _normalize_polish_decimals
+    # TODO some cast to int needed
 )
 
 def normalize_report(report: CsvReport) -> CsvReport:
