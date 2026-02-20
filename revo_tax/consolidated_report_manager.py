@@ -18,10 +18,6 @@ class ConsolidatedReportManager:
             self._report: CsvReport = normalize_report(report)
 
 
-
-
     @cached_property
-    def savings_accounts_section(self):
-        # TODO create a way to extract only savings-related part of csv file.
-        #    pro-tip: Summary for ... and empty newline
+    def savings(self):
         return SavingsView(self._report)
