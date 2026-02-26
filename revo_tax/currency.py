@@ -16,10 +16,10 @@ def yesterday(given_date: datetime.date) -> datetime.date:
     return given_date - datetime.timedelta(days=1)
 
 
-def convert(
-    amount: float, currency: Currency, conversion_date: datetime.date | None = None
+def convert_to_pln(
+    amount: float, currency: Currency, conversion_date: datetime.date
 ) -> float:
-    # TODO not all days are collected... fml
+    # TODO not all days are collected... fml, consider other options
     return currency_converter.convert(
         amount,
         currency=currency.value,

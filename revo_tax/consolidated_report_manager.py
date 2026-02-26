@@ -6,7 +6,7 @@ from functools import cached_property
 
 from revo_tax.common import CsvReport
 from revo_tax.report_sanitizer import normalize_report
-from revo_tax.savings_account import SavingsView
+from revo_tax.accounts.savings import SavingsView
 
 
 class ConsolidatedReportManager:
