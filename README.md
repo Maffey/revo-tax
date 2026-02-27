@@ -1,3 +1,7 @@
+# THIS PROJECT IS ABANDONED
+
+Mostly because I realized I can calculate it more easily in Excel ;p
+
 # RevoTax
 
 Helps you calculate the taxes for Revolut in Poland.
